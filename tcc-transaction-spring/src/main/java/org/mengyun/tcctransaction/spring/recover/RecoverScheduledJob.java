@@ -4,20 +4,28 @@ import org.mengyun.tcctransaction.SystemException;
 import org.mengyun.tcctransaction.recover.TransactionRecovery;
 import org.mengyun.tcctransaction.support.TransactionConfigurator;
 import org.quartz.Scheduler;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 import org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
 
 /**
  * Created by changming.xie on 6/2/16.
  */
+
+@Component
 public class RecoverScheduledJob {
 
+    @Autowired
     private TransactionRecovery transactionRecovery;
-
+    @Autowired
     private TransactionConfigurator transactionConfigurator;
 
     private Scheduler scheduler;
 
+    @PostConstruct
     public void init() {
 
         try {

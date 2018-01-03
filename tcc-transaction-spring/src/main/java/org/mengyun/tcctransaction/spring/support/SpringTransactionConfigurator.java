@@ -8,6 +8,7 @@ import org.mengyun.tcctransaction.spring.recover.DefaultRecoverConfig;
 import org.mengyun.tcctransaction.support.TransactionConfigurator;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.PostConstruct;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -27,6 +28,7 @@ public class SpringTransactionConfigurator implements TransactionConfigurator {
 
     private TransactionManager transactionManager;
 
+    @PostConstruct
     public void init() {
         transactionManager = new TransactionManager();
         transactionManager.setTransactionRepository(transactionRepository);
