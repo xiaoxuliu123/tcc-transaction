@@ -3,12 +3,15 @@ package org.mengyun.tcctransaction.spring.repository;
 
 import org.mengyun.tcctransaction.repository.JdbcTransactionRepository;
 import org.springframework.jdbc.datasource.DataSourceUtils;
+import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 
 /**
  * Created by changmingxie on 10/30/15.
  */
+
+@Component
 public class SpringJdbcTransactionRepository extends JdbcTransactionRepository {
 
     protected Connection getConnection() {

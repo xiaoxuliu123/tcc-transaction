@@ -7,6 +7,8 @@ import org.mengyun.tcctransaction.interceptor.CompensableTransactionInterceptor;
 import org.mengyun.tcctransaction.support.TransactionConfigurator;
 import org.springframework.core.Ordered;
 
+import javax.annotation.PostConstruct;
+
 /**
  * Created by changmingxie on 10/30/15.
  */
@@ -15,6 +17,7 @@ public class ConfigurableTransactionAspect extends CompensableTransactionAspect 
 
     private TransactionConfigurator transactionConfigurator;
 
+    @PostConstruct
     public void init() {
 
         TransactionManager transactionManager = transactionConfigurator.getTransactionManager();

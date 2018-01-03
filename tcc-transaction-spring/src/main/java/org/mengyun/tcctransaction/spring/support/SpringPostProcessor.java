@@ -12,6 +12,8 @@ import javax.annotation.PostConstruct;
 /**
  * Created by changmingxie on 11/20/15.
  */
+
+@Component
 public class SpringPostProcessor implements ApplicationListener<ContextRefreshedEvent> {
 
     @Override

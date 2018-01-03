@@ -5,12 +5,15 @@ import org.mengyun.tcctransaction.support.FactoryBuilder;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
 /**
  * Created by changmingxie on 11/22/15.
  */
+
+@Component
 public class SpringBeanFactory implements BeanFactory, ApplicationContextAware {
 
     private ApplicationContext applicationContext;
