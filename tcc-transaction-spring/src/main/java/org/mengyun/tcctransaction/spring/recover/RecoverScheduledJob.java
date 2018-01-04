@@ -22,7 +22,7 @@ public class RecoverScheduledJob {
     private TransactionRecovery transactionRecovery;
     @Autowired
     private TransactionConfigurator transactionConfigurator;
-
+    @Autowired
     private Scheduler scheduler;
 
     @PostConstruct

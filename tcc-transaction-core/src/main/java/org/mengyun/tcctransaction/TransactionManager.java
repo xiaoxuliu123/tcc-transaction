@@ -1,9 +1,10 @@
 package org.mengyun.tcctransaction;
 
-import org.apache.log4j.Logger;
 import org.mengyun.tcctransaction.api.TransactionContext;
 import org.mengyun.tcctransaction.api.TransactionStatus;
 import org.mengyun.tcctransaction.common.TransactionType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Deque;
 import java.util.LinkedList;
@@ -14,7 +15,7 @@ import java.util.concurrent.ExecutorService;
  */
 public class TransactionManager {
 
-    static final Logger logger = Logger.getLogger(TransactionManager.class.getSimpleName());
+    private final static Logger logger = LoggerFactory.getLogger(TransactionManager.class);
 
     private TransactionRepository transactionRepository;
 
