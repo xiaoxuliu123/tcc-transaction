@@ -19,10 +19,10 @@
     </modules>
 
     <properties>
-        <springframework.version>3.2.12.RELEASE</springframework.version>
+        <springframework.version>4.3.13.RELEASE</springframework.version>
 
-        <java.src.version>1.6</java.src.version>
-        <java.target.version>1.6</java.target.version>
+        <java.src.version>1.7</java.src.version>
+        <java.target.version>1.7</java.target.version>
         <project.encoding>UTF-8</project.encoding>
 
         <repo.internal.snapshots.url>http://artifactory.ximalaya.com/artifactory/thirdparty-snapshots-local/
